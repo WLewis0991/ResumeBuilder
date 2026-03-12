@@ -30,3 +30,27 @@
 .welcome-button:hover{
     transform: scale(1.07);
 }
+
+.template-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template-container{
+    width: 1000px;
+    height: 700px;
+    border: 2px solid black;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+}
+
+.preview-container{
+    background-color: aqua;
+    border-left: 2px solid black;
+}
+
+.input-container{
+
+}

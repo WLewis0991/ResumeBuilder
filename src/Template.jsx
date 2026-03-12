@@ -8,9 +8,10 @@ import Preview from "./Preview.jsx";
 export default function Template() {
 
     return(<>
-    <p>Template</p>
-    <div>
-        <div>
+  
+    <div className="template-page">
+          <p>Template</p>
+        <div className="template-container">
             <div className="input-container">
                 <Pesonal />
                 <Projects />
