@@ -2,9 +2,9 @@
 export default function Welcome () {
 
     return(<>
-        <div>
+        <div className="welcome-section">
             <p>Welcome</p>
-            <button>Enter</button>
+            <button className="welcome-button">Enter</button>
         </div>
     </>)
 }
