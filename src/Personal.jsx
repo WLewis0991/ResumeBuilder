@@ -1,8 +1,14 @@
+import Projects from "./Projects.jsx"
+import Button from "./assets/Button.jsx"
+import { useState } from "react"
 
-
-export default function Pesonal () {
+export default function Pesonal (props) {
+    const {renderView} = props
 
     return(<>
         <p>Personal</p>
+        <Projects />
+        <Button text="Next Page" page = "projects"></Button>
+
     </>)
 }
