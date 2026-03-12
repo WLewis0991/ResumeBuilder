@@ -1,10 +1,12 @@
+import Template from "./Template"
 
-export default function Welcome () {
+export default function Welcome (props) {
+    const {setView} = props
 
     return(<>
         <div className="welcome-section">
             <p>Welcome</p>
-            <button className="welcome-button">Enter</button>
+            <button onClick={()=>setView("template")} className="welcome-button">Enter</button>
         </div>
     </>)
 }
