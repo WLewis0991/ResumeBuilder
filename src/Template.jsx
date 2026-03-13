@@ -20,16 +20,11 @@ export default function Template() {
     education: []
   });
 
-  function changeView(page){
-    setView(page)
-  }
-
   function renderView() {
     switch (view) {
       case "personal":
         return (
           <Personal
-            changeView={changeView}
             setView={setView}
             resumeData={resumeData}
             setResumeData={setResumeData}

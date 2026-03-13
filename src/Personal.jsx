@@ -7,7 +7,27 @@ export default function Pesonal (props) {
 
 
     return(<>
+    <div>
         <p>Personal</p>
+        <label>Name</label>
+        <input type="text"/>
+        <br />
+        <label>Address</label>
+        <input type="text" />
+        <br />
+        <label>Email</label>
+        <input type="text" />
+        <br />
+        <label>Phone Number</label>
+        <input type="text" />
+        <br />
+
+    </div>
+
+
+        
+        
+        <br />
         <Button text="Next Page" page = {() => setView("projects")}></Button>
 
     </>)
