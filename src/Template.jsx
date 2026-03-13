@@ -13,7 +13,9 @@ export default function Template() {
     personal: {
       name: "",
       email: "",
-      phone: ""
+      phone: "",
+      address:"",
+      about:""
     },
     projects: [],
     work: [],
