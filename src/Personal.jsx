@@ -19,7 +19,7 @@ export default function Pesonal (props) {
 }
 
     return(<>
-    <div>
+    <div className="personal-section">
         <p>Personal</p>
         <label>Name</label>
         <input type="text" name="name" value={resumeData.personal.name} onChange={handleChange}/>
@@ -43,7 +43,10 @@ export default function Pesonal (props) {
         
         
         <br />
-        <Button text="Next Page" page = {() => setView("projects")}></Button>
+        <div className="button-container">
+          <Button text="Previous Page" page = {() => setView("personal")}></Button>
+          <Button text="Next Page" page = {() => setView("projects")}></Button>
+        </div>
 
     </>)
 }

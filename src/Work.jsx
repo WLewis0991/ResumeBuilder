@@ -58,10 +58,10 @@ export default function Work(props) {
         <button onClick={addJob}>Submit</button>
 
         <br />
-
-        <Button text="Previous Page" page = {() => setView("projects")}></Button>
-        <Button text="Next Page" page = {() => setView("education")}></Button>
-
+        <div className="button-container">
+            <Button text="Previous Page" page = {() => setView("projects")}></Button>
+            <Button text="Next Page" page = {() => setView("education")}></Button>
+        </div>
 
     </>)
 }

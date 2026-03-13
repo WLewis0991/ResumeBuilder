@@ -43,10 +43,11 @@ export default function Education (props){
         <button onClick={addEducation}>Submit</button>
         <br />
         <br />
-        
-
-        <Button text="Previous Page" page = {() => setView("work")}></Button>
-
+         
+        <div className="button-container">
+            <Button text="Previous Page" page = {() => setView("work")}></Button>
+            <Button text="Next Page" page = {() => setView("education")}></Button>
+        </div>
     </>)
 
 }

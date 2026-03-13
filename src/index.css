@@ -40,17 +40,32 @@
 .template-container{
     width: 1000px;
     height: 700px;
-    border: 2px solid black;
+    border: none;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
     margin: 50px;
     display: grid;
     grid-template-columns: 500px 500px;
 }
 
 .preview-container{
-    background-color: aqua;
-    border-left: 2px solid black;
+    border-left: 2px solid rgba(0, 0, 0, 0.263);
+    padding: 5px;
+
 }
 
 .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 
+}
+.button-container{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

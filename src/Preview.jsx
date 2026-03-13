@@ -4,7 +4,7 @@ export default function Preview(props) {
     const{resumeData} = props
 
     return(<>
-    <div className="preview-container">
+    <div>
         <p>Preview</p>
             <div>
       <h1>{resumeData.personal.name}</h1>

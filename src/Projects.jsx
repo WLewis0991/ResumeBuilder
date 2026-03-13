@@ -60,10 +60,10 @@ export default function Projects (props){
         <button onClick={addSkill}>Submit Skill</button>
         <br />
         <br />
-
-        <Button text= "Previous Page" page={() => setView("personal")} />
-        <Button text="Next Page" page = {() => setView("work")} />
-        
+        <div className="button-container">
+            <Button text= "Previous Page" page={() => setView("personal")} />
+            <Button text="Next Page" page = {() => setView("work")} />
+        </div>
 
     </>)
 }
