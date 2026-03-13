@@ -6,13 +6,12 @@ export default function Projects (props){
 
     const {setView, resumeData, setResumeData} = props
 
-    const [name,setName] = useState("")
-    const [description, setDescription] = useState("");
+    const [title,setTitle] = useState("")
+    const [description, setDescription] = useState("")
+    const [skill, setSkill] = useState("")
 
-    const [skill, setSkill] = useState("");
-
-    function handleNameChange(e){
-        setName(e.target.value)
+    function handleTitleChange(e){
+        setTitle(e.target.value)
     }
 
     function handleDescriptionChange(e){
@@ -24,46 +23,59 @@ export default function Projects (props){
     }
 
     function addProject(){
-        setResumeData(r => ({...r,projects: [
-            ...r.projects,{ title:{name}, description: {description} }
-        ]}));
-        setName("");
-        setDescription("");
-        console.log({resumeData})
+        setResumeData(r => ({
+            ...r,
+            projects: [
+                ...r.projects,
+                { title, description }   // ✅ FIXED
+            ]
+        }))
+
+        setTitle("")
+        setDescription("")
     }
 
     function addSkill(){
-        setResumeData(r => ({...r,skills:[
-            ...r.skills,{skill}
-        ]}));
-        console.log({resumeData})
-        setSkill("")
+        setResumeData(r => ({
+            ...r,
+            skills: [
+                ...r.skills,
+                skill
+            ]
+        }))
 
+        setSkill("")
     }
 
-    return(<>
+    return(
+    <>
         <p>Projects</p>
         <br />
-        <p>project Name</p>
-        <input type="text" name="project" value={name} onChange={handleNameChange}/>
+
+        <p>Project Name</p>
+        <input type="text" name="project" value={title} onChange={handleTitleChange}/>
 
         <p>Project Description</p>
         <input type="text" name="description" value={description} onChange={handleDescriptionChange}/>
+
         <br />
         <button onClick={addProject}>submit project</button>
-        <br />
-        <br />
+
+        <br /><br />
+
         <label>Skill</label>
         <br />
         <input type="text" value={skill} onChange={handleSkill}/>
+
         <br />
         <button onClick={addSkill}>Submit Skill</button>
-        <br />
-        <br />
-        <div className="button-container">
-            <Button text= "Previous Page" page={() => setView("personal")} />
-            <Button text="Next Page" page = {() => setView("work")} />
-        </div>
 
-    </>)
+        <br /><br />
+
+        <div className="button-container">
+            <Button text="Previous Page" page={() => setView("personal")} />
+            <Button text="Next Page" page={() => setView("work")} />
+        </div>
+    </>
+    )
 }

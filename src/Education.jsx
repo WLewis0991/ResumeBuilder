@@ -22,7 +22,7 @@ export default function Education (props){
 
     function addEducation (){
         setResumeData(r => ({...r,education: [
-            ...r.education,{ name:{name}, year:{year}, description: {description} }
+            ...r.education,{ name, year, description }
         ]}));
         setName("");
         setYear("")

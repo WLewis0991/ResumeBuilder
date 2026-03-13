@@ -32,7 +32,7 @@ export default function Work(props) {
 
     function addJob(){
     setResumeData(r => ({...r,work: [
-        ...r.work,{ job:{name}, position: {position}, yearsWorked: `${yearStart} to ${yearEnd}`, description:{description}, }
+        ...r.work,{name, position, yearStart, yearEnd, description }
         ]}));
         setName("");
         setPosition("");
