@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Template() {
 
-  const [view, setView] = useState("personal");
+  const [view, setView] = useState("work");
 
   const [resumeData, setResumeData] = useState({
     personal: {

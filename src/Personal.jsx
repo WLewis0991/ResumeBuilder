@@ -7,7 +7,7 @@ export default function Pesonal (props) {
 
     return(<>
         <p>Personal</p>
-        <Projects />
+
         <Button text="Next Page" page = "projects"></Button>
 
     </>)
