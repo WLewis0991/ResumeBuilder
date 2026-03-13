@@ -28,7 +28,7 @@ export default function Pesonal (props) {
         <input type="text" name="address" value={resumeData.personal.address} onChange={handleChange}/>
         <br />
         <label>Email</label>
-        <input type="text" name="email" value={resumeData.personal.email} onChange={handleChange}/>
+        <input type="email" name="email" value={resumeData.personal.email} onChange={handleChange}/>
         <br />
         <label>Phone Number</label>
         <input type="text" name="phone" value={resumeData.personal.phone} onChange={handleChange}/>

@@ -36,7 +36,7 @@ export default function Education (props){
         <p>Name</p>
         <input type="text" value={name} onChange={handleNameChange}/>
         <p>Year Attended</p>
-        <input type="number" value={year} onChange={handleYearChange}/>
+        <input type="date" value={year} onChange={handleYearChange}/>
         <p>Description/Achievements</p>
         <input type="text" value={description} onChange={handleDescriptionChange}/>
         <br />

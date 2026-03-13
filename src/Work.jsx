@@ -50,7 +50,7 @@ export default function Work(props) {
         <p>Position</p>
         <input type="text" value={position} onChange={handlePositionChange}/>
         <p>Years Worked </p>
-        <input type="number" value={yearStart} onChange={handleYearStartChange}/><span>to</span><input type="number" value={yearEnd} onChange={handleYeaEndChange}/>
+        <input type="date" value={yearStart} onChange={handleYearStartChange}/><span>to</span><input type="date" value={yearEnd} onChange={handleYeaEndChange}/>
         <br />
         <p>Description/Responsibilities</p>
         <input type="text" value={description} onChange={handleDesciptionChange}/>
