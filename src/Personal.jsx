@@ -3,12 +3,12 @@ import Button from "./assets/Button.jsx"
 import { useState } from "react"
 
 export default function Pesonal (props) {
-    const {renderView} = props
+    const {setView} = props
+
 
     return(<>
         <p>Personal</p>
-
-        <Button text="Next Page" page = "projects"></Button>
+        <Button text="Next Page" page = {() => setView("projects")}></Button>
 
     </>)
 }

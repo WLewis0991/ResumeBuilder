@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Template() {
 
-  const [view, setView] = useState("work");
+  const [view, setView] = useState("personal");
 
   const [resumeData, setResumeData] = useState({
     personal: {
@@ -20,11 +20,16 @@ export default function Template() {
     education: []
   });
 
+  function changeView(page){
+    setView(page)
+  }
+
   function renderView() {
     switch (view) {
       case "personal":
         return (
           <Personal
+            changeView={changeView}
             setView={setView}
             resumeData={resumeData}
             setResumeData={setResumeData}
