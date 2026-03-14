@@ -30,6 +30,13 @@ export default function Education (props){
         console.log({resumeData})    
     }
 
+    function removeEducation(index){
+        setResumeData(r => ({ ...r, education: [
+            ...r.education.filter((_,i)=> i !== index)
+        ] 
+        }))
+    }
+
     return (<>
         <p>Education</p>
         <br />
@@ -42,6 +49,18 @@ export default function Education (props){
         <br />
         <button onClick={addEducation}>Submit</button>
         <br />
+        <div>
+            <ul>
+                {resumeData.education.map((school, index)=> (
+                    <li key={index}>
+                        <h4>{school.name}</h4>
+                        <p>{school.year}</p>
+                        <p>{school.description}</p>
+                        <button onClick={()=> removeEducation(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
         <br />
          
         <div className="button-container">

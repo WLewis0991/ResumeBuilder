@@ -42,6 +42,12 @@ export default function Work(props) {
         console.log({resumeData})
     }
 
+    function deleteJob(index){
+        setResumeData(r => ({...r, work: [
+            ...r.work.filter((_,i)=> i !== index)
+        ]}))
+    }
+
     return(<>
         <p>work</p>
         <br />
@@ -56,6 +62,20 @@ export default function Work(props) {
         <input type="text" value={description} onChange={handleDesciptionChange}/>
         <br />
         <button onClick={addJob}>Submit</button>
+        <br />
+        <div>
+            <ul>
+                {resumeData.work.map((work, index)=> (
+                    <li key={index}>
+                        <p>{work.name}</p>
+                        <p>{work.position}</p>
+                        <p>{work.yearStart} to {work.yearEnd}</p>
+                        <p>{work.description}</p>
+                        <button onClick={()=>deleteJob(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
 
         <br />
         <div className="button-container">

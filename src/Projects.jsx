@@ -35,6 +35,13 @@ export default function Projects (props){
         setDescription("")
     }
 
+    function deleteProject(index){
+        setResumeData(r => ({
+            ...r,
+            projects: r.projects.filter((_, i) => i !== index)
+        }))
+    }
+
     function addSkill(){
         setResumeData(r => ({
             ...r,
@@ -45,6 +52,12 @@ export default function Projects (props){
         }))
 
         setSkill("")
+    }
+    function deleteSkill(index){
+        setResumeData(r => ({
+            ...r,
+            skills: r.skills.filter((_, i) => i !== index)
+        }))
     }
 
     return(
@@ -60,7 +73,18 @@ export default function Projects (props){
 
         <br />
         <button onClick={addProject}>submit project</button>
-
+        <br />
+        <div>
+            <ul>
+                {resumeData.projects.map((project,index) => (
+                    <li key={index}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <button onClick={()=> deleteProject(index)}>Delete</button>
+                    </li>
+                    ))}
+            </ul>
+         </div>           
         <br /><br />
 
         <label>Skill</label>
@@ -71,6 +95,17 @@ export default function Projects (props){
         <button onClick={addSkill}>Submit Skill</button>
 
         <br /><br />
+        <div>
+            <ul>
+                {resumeData.skills.map((skill, index)=> (
+                    <li key={index}>
+                        <p>{skill}</p>
+                        <button onClick={() => deleteSkill(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <br />
 
         <div className="button-container">
             <Button text="Previous Page" page={() => setView("personal")} />
