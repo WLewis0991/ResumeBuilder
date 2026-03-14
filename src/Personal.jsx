@@ -20,7 +20,7 @@ export default function Pesonal (props) {
 
     return(<>
     <div className="personal-section">
-        <p>Personal</p>
+        <p className="personal-header">Personal</p>
         <label>Name</label>
         <input type="text" name="name" value={resumeData.personal.name} onChange={handleChange}/>
         <br />
@@ -35,7 +35,7 @@ export default function Pesonal (props) {
 
         <br />
         <label>About</label>
-        <input type="textarea" name="about" value={resumeData.personal.about} onChange={handleChange}/>
+        <textarea className="about-input" type="text" name="about" value={resumeData.personal.about} onChange={handleChange}/>
 
     </div>
 
