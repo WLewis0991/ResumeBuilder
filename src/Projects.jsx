@@ -62,9 +62,9 @@ export default function Projects (props){
 
     return(
     <>
-        <p>Projects</p>
-        <br />
-
+        <header className="project-header">Projects</header>
+        
+        <div className="project-div">
         <p>Project Name</p>
         <input type="text" name="project" value={title} onChange={handleTitleChange}/>
 
@@ -72,28 +72,26 @@ export default function Projects (props){
         <input type="text" name="description" value={description} onChange={handleDescriptionChange}/>
 
         <br />
-        <button onClick={addProject}>submit project</button>
-        <br />
+        <button className="project-submit-button" onClick={addProject}>submit project</button>
+        </div>
         <div>
             <ul>
                 {resumeData.projects.map((project,index) => (
                     <li key={index}>
                         <h3>{project.title}</h3>
-                        <p>{project.description}</p>
                         <button onClick={()=> deleteProject(index)}>Delete</button>
                     </li>
                     ))}
             </ul>
          </div>           
-        <br /><br />
-
-        <label>Skill</label>
+        <div className="skills-section">
+        <header className="skills-header">Skill</header>
         <br />
-        <input type="text" value={skill} onChange={handleSkill}/>
+        <textarea className="skills-input" type="text" value={skill} onChange={handleSkill}/>
 
         <br />
-        <button onClick={addSkill}>Submit Skill</button>
-
+        <button className="submit-skill-button" onClick={addSkill}>Submit Skill</button>
+        </div>
         <br /><br />
         <div>
             <ul>

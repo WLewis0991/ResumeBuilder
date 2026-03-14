@@ -38,17 +38,17 @@ export default function Education (props){
     }
 
     return (<>
-        <p>Education</p>
-        <br />
+        <header className="education-header">Education</header>
+        <div className="education-section">
         <p>Name</p>
-        <input type="text" value={name} onChange={handleNameChange}/>
+        <input className="education-input" type="text" value={name} onChange={handleNameChange}/>
         <p>Year Attended</p>
-        <input type="date" value={year} onChange={handleYearChange}/>
+        <input type="date" className="date-input" value={year} onChange={handleYearChange}/>
         <p>Description/Achievements</p>
-        <input type="text" value={description} onChange={handleDescriptionChange}/>
+        <textarea type="text" value={description} onChange={handleDescriptionChange}/>
         <br />
-        <button onClick={addEducation}>Submit</button>
-        <br />
+        <button className="education-submit-button" onClick={addEducation}>Submit</button>
+        </div>
         <div>
             <ul>
                 {resumeData.education.map((school, index)=> (

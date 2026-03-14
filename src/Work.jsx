@@ -49,19 +49,18 @@ export default function Work(props) {
     }
 
     return(<>
-        <p>work</p>
-        <br />
+        <header className="work-header">Work</header>
         <p>Job Name</p>
-        <input type="text" value={name} onChange={handleNameChange} />
+        <input className="work-input" type="text" value={name} onChange={handleNameChange} />
         <p>Position</p>
-        <input type="text" value={position} onChange={handlePositionChange}/>
+        <input className="work-input" type="text" value={position} onChange={handlePositionChange}/>
         <p>Years Worked </p>
-        <input type="date" value={yearStart} onChange={handleYearStartChange}/><span>to</span><input type="date" value={yearEnd} onChange={handleYeaEndChange}/>
+        <input className="date-input" type="date" value={yearStart} onChange={handleYearStartChange}/><span>to</span><input className="date-input" type="date" value={yearEnd} onChange={handleYeaEndChange}/>
         <br />
         <p>Description/Responsibilities</p>
-        <input type="text" value={description} onChange={handleDesciptionChange}/>
+        <textarea className="work-description" type="text" value={description} onChange={handleDesciptionChange}/>
         <br />
-        <button onClick={addJob}>Submit</button>
+        <button className="work-submit-button" onClick={addJob}>Submit</button>
         <br />
         <div>
             <ul>
