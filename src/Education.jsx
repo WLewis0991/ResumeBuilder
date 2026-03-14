@@ -53,10 +53,10 @@ export default function Education (props){
             <ul>
                 {resumeData.education.map((school, index)=> (
                     <li key={index}>
+                        <div className="input-preview">
                         <h4>{school.name}</h4>
-                        <p>{school.year}</p>
-                        <p>{school.description}</p>
-                        <button onClick={()=> removeEducation(index)}>Delete</button>
+                        <button className="delete-button" onClick={()=> removeEducation(index)}>Delete</button>
+                        </div>
                     </li>
                 ))}
             </ul>

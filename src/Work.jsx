@@ -66,11 +66,10 @@ export default function Work(props) {
             <ul>
                 {resumeData.work.map((work, index)=> (
                     <li key={index}>
+                        <div className="input-preview">
                         <p>{work.name}</p>
-                        <p>{work.position}</p>
-                        <p>{work.yearStart} to {work.yearEnd}</p>
-                        <p>{work.description}</p>
-                        <button onClick={()=>deleteJob(index)}>Delete</button>
+                        <button className="delete-button" onClick={()=>deleteJob(index)}>Delete</button>
+                        </div>
                     </li>
                 ))}
             </ul>

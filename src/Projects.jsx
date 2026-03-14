@@ -30,7 +30,6 @@ export default function Projects (props){
                 { title, description }   // ✅ FIXED
             ]
         }))
-
         setTitle("")
         setDescription("")
     }
@@ -50,7 +49,6 @@ export default function Projects (props){
                 skill
             ]
         }))
-
         setSkill("")
     }
     function deleteSkill(index){
@@ -78,8 +76,10 @@ export default function Projects (props){
             <ul>
                 {resumeData.projects.map((project,index) => (
                     <li key={index}>
+                        <div className="input-preview">
                         <h3>{project.title}</h3>
-                        <button onClick={()=> deleteProject(index)}>Delete</button>
+                        <button className="delete-button" onClick={()=> deleteProject(index)}>Delete</button>
+                        </div>
                     </li>
                     ))}
             </ul>
@@ -97,8 +97,10 @@ export default function Projects (props){
             <ul>
                 {resumeData.skills.map((skill, index)=> (
                     <li key={index}>
+                        <div className="input-preview">
                         <p>{skill}</p>
-                        <button onClick={() => deleteSkill(index)}>Delete</button>
+                        <button className="delete-button" onClick={() => deleteSkill(index)}>Delete</button>
+                        </div>
                     </li>
                 ))}
             </ul>
